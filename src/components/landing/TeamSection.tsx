@@ -127,69 +127,6 @@ export function TeamSection() {
                   {member.desc}
                 </p>
 
-                {/* Links */}
-                <div style={{ display: 'flex', justifyContent: 'center', gap: 10 }}>
-                  {member.links.linkedin && (
-                    <a
-                      href={member.links.linkedin}
-                      style={{
-                        width: 36,
-                        height: 36,
-                        borderRadius: 10,
-                        background: 'rgba(155,130,200,0.1)',
-                        border: '1px solid rgba(155,130,200,0.2)',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        fontSize: 15,
-                        textDecoration: 'none',
-                        transition: 'all 0.2s ease',
-                        color: 'var(--color-text-secondary)',
-                      }}
-                      title="LinkedIn"
-                      onMouseEnter={(e) => {
-                        ;(e.currentTarget as HTMLElement).style.background = member.color
-                        ;(e.currentTarget as HTMLElement).style.transform = 'translateY(-2px)'
-                      }}
-                      onMouseLeave={(e) => {
-                        ;(e.currentTarget as HTMLElement).style.background = 'rgba(155,130,200,0.1)'
-                        ;(e.currentTarget as HTMLElement).style.transform = 'translateY(0)'
-                      }}
-                    >
-                      💼
-                    </a>
-                  )}
-                  {member.links.github && (
-                    <a
-                      href={member.links.github}
-                      style={{
-                        width: 36,
-                        height: 36,
-                        borderRadius: 10,
-                        background: 'rgba(155,130,200,0.1)',
-                        border: '1px solid rgba(155,130,200,0.2)',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        fontSize: 15,
-                        textDecoration: 'none',
-                        transition: 'all 0.2s ease',
-                        color: 'var(--color-text-secondary)',
-                      }}
-                      title="GitHub"
-                      onMouseEnter={(e) => {
-                        ;(e.currentTarget as HTMLElement).style.background = member.color
-                        ;(e.currentTarget as HTMLElement).style.transform = 'translateY(-2px)'
-                      }}
-                      onMouseLeave={(e) => {
-                        ;(e.currentTarget as HTMLElement).style.background = 'rgba(155,130,200,0.1)'
-                        ;(e.currentTarget as HTMLElement).style.transform = 'translateY(0)'
-                      }}
-                    >
-                      🐙
-                    </a>
-                  )}
-                </div>
               </div>
             </motion.div>
           ))}

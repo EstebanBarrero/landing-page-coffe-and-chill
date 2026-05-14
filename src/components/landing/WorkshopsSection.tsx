@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { Coffee, Paintbrush, Layers } from 'lucide-react'
 import { WORKSHOP_FEATURES } from '@/data/content'
 
 export function WorkshopsSection() {
@@ -31,8 +32,8 @@ export function WorkshopsSection() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: 16, marginBottom: 36 }}>
               {WORKSHOP_FEATURES.map((f) => (
                 <div key={f.title} style={{ display: 'flex', alignItems: 'flex-start', gap: 14 }}>
-                  <div style={{ width: 40, height: 40, borderRadius: 12, background: f.color, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 18, flexShrink: 0 }}>
-                    {f.emoji}
+                  <div style={{ width: 40, height: 40, borderRadius: 12, background: f.color, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, color: 'var(--color-espresso)' }}>
+                    <f.Icon size={20} strokeWidth={1.8} />
                   </div>
                   <div>
                     <h4 style={{ margin: '0 0 4px', fontSize: '0.95rem', fontWeight: 700, color: 'var(--color-espresso)' }}>
@@ -72,9 +73,9 @@ export function WorkshopsSection() {
 
                 {/* Fake workshop rows */}
                 {[
-                  { name: 'Latte Art', date: '24 Mayo', spots: 4, color: 'var(--color-peach)', emoji: '☕' },
-                  { name: 'Acuarela & Café', date: '31 Mayo', spots: 6, color: 'var(--color-lavender)', emoji: '🎨' },
-                  { name: 'Escultura en Arcilla', date: '7 Jun', spots: 3, color: 'var(--color-sage)', emoji: '🏺' },
+                  { name: 'Latte Art', date: '24 Mayo', spots: 4, color: 'var(--color-peach)', Icon: Coffee },
+                  { name: 'Acuarela & Café', date: '31 Mayo', spots: 6, color: 'var(--color-lavender)', Icon: Paintbrush },
+                  { name: 'Escultura en Arcilla', date: '7 Jun', spots: 3, color: 'var(--color-sage)', Icon: Layers },
                 ].map((w, i) => (
                   <motion.div
                     key={w.name}
@@ -84,8 +85,8 @@ export function WorkshopsSection() {
                     transition={{ delay: 0.2 + i * 0.12, duration: 0.5 }}
                     style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '12px 0', borderBottom: i < 2 ? '1px solid rgba(255,255,255,0.4)' : 'none' }}
                   >
-                    <div style={{ width: 36, height: 36, borderRadius: 10, background: w.color, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 16, flexShrink: 0 }}>
-                      {w.emoji}
+                    <div style={{ width: 36, height: 36, borderRadius: 10, background: w.color, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, color: 'var(--color-espresso)' }}>
+                      <w.Icon size={16} strokeWidth={1.8} />
                     </div>
                     <div style={{ flex: 1 }}>
                       <p style={{ margin: '0 0 2px', fontSize: '0.85rem', fontWeight: 600, color: 'var(--color-espresso)' }}>{w.name}</p>
