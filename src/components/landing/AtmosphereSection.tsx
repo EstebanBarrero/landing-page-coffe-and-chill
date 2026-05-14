@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { Smartphone, Lock, RefreshCw, Cloud, Coffee } from 'lucide-react'
 
 const DASHBOARD_ITEMS = [
   { label: 'Ingresos hoy', value: '$284.500', change: '+18%', color: 'var(--color-sage)', positive: true },
@@ -49,7 +50,7 @@ export function AtmosphereSection() {
 
           {/* Nav bar mockup */}
           <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 24, borderBottom: '1px solid rgba(255,255,255,0.4)', paddingBottom: 16, position: 'relative', zIndex: 1 }}>
-            <span style={{ fontSize: 16 }}>☕</span>
+            <Coffee size={16} strokeWidth={1.8} style={{ color: 'var(--color-caramel)' }} />
             <span className="font-display" style={{ fontSize: '0.9rem', fontWeight: 700, color: 'var(--color-espresso)' }}>Tu Cafetería</span>
             <div style={{ marginLeft: 'auto', display: 'flex', gap: 8 }}>
               {['Dashboard', 'Pedidos', 'Inventario', 'Talleres', 'Analíticas'].map((t) => (
@@ -110,10 +111,10 @@ export function AtmosphereSection() {
         {/* Bottom features row */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 14 }}>
           {[
-            { emoji: '📱', text: 'Acceso desde cualquier dispositivo' },
-            { emoji: '🔒', text: 'Datos seguros con cifrado SSL' },
-            { emoji: '🔄', text: 'Actualizaciones automáticas' },
-            { emoji: '🌐', text: '100% en la nube · Sin instalaciones' },
+            { Icon: Smartphone, text: 'Acceso desde cualquier dispositivo' },
+            { Icon: Lock,       text: 'Datos seguros con cifrado SSL' },
+            { Icon: RefreshCw,  text: 'Actualizaciones automáticas' },
+            { Icon: Cloud,      text: '100% en la nube · Sin instalaciones' },
           ].map((f, i) => (
             <motion.div
               key={f.text}
@@ -124,7 +125,7 @@ export function AtmosphereSection() {
               className="glass-subtle"
               style={{ padding: '16px 18px', display: 'flex', alignItems: 'center', gap: 12 }}
             >
-              <span style={{ fontSize: 20 }}>{f.emoji}</span>
+              <f.Icon size={20} strokeWidth={1.8} style={{ color: 'var(--color-caramel)', flexShrink: 0 }} />
               <span style={{ fontSize: '0.82rem', color: 'var(--color-text-secondary)', fontWeight: 500, lineHeight: 1.4 }}>{f.text}</span>
             </motion.div>
           ))}

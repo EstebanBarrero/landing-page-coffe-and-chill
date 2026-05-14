@@ -53,8 +53,8 @@ export function FeaturesSection() {
                 </div>
 
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: 16, marginBottom: 16 }}>
-                  <div style={{ width: 48, height: 48, borderRadius: 14, background: feature.color, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 22, flexShrink: 0, boxShadow: '0 4px 12px rgba(0,0,0,0.07)' }}>
-                    {feature.icon}
+                  <div style={{ width: 48, height: 48, borderRadius: 14, background: feature.color, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, boxShadow: '0 4px 12px rgba(0,0,0,0.07)', color: 'var(--color-espresso)' }}>
+                    <feature.Icon size={22} strokeWidth={1.8} />
                   </div>
                   <h3 className="font-display" style={{ fontSize: '1.1rem', fontWeight: 600, color: 'var(--color-espresso)', margin: 0, lineHeight: 1.3 }}>
                     {feature.title}

@@ -32,11 +32,11 @@ export function LandingFooter() {
                   key={s.label}
                   href={s.href}
                   title={s.label}
-                  style={{ width: 36, height: 36, borderRadius: 10, background: 'rgba(155,130,200,0.1)', border: '1px solid rgba(155,130,200,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 15, textDecoration: 'none', transition: 'all 0.2s ease' }}
-                  onMouseEnter={(e) => { ;(e.currentTarget as HTMLElement).style.background = 'var(--color-accent)'; ;(e.currentTarget as HTMLElement).style.transform = 'translateY(-2px)' }}
-                  onMouseLeave={(e) => { ;(e.currentTarget as HTMLElement).style.background = 'rgba(155,130,200,0.1)'; ;(e.currentTarget as HTMLElement).style.transform = 'translateY(0)' }}
+                  style={{ width: 36, height: 36, borderRadius: 10, background: 'rgba(155,130,200,0.1)', border: '1px solid rgba(155,130,200,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none', transition: 'all 0.2s ease', color: 'var(--color-text-secondary)' }}
+                  onMouseEnter={(e) => { ;(e.currentTarget as HTMLElement).style.background = 'var(--color-accent)'; ;(e.currentTarget as HTMLElement).style.transform = 'translateY(-2px)'; ;(e.currentTarget as HTMLElement).style.color = '#fff' }}
+                  onMouseLeave={(e) => { ;(e.currentTarget as HTMLElement).style.background = 'rgba(155,130,200,0.1)'; ;(e.currentTarget as HTMLElement).style.transform = 'translateY(0)'; ;(e.currentTarget as HTMLElement).style.color = 'var(--color-text-secondary)' }}
                 >
-                  {s.icon}
+                  <s.Icon size={16} strokeWidth={2} />
                 </a>
               ))}
             </div>
